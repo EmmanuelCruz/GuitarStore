@@ -8,7 +8,6 @@ import Footer from "./components/Footer.vue";
 // const state = reactive({
 //   guitarras: db
 // })
-// console.log(state.guitarras)
 
 const guitarras = ref([]);
 const carrito = ref([]);
@@ -37,7 +36,6 @@ const agregarCarrito = (guitarra) => {
   const existeCarrito = carrito.value.findIndex(
     (producto) => producto.id === guitarra.id
   );
-  console.log(guitarra);
   if (existeCarrito < 0) {
     guitarra.cantidad = 1;
     carrito.value.push(guitarra);
